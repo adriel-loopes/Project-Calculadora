@@ -1,0 +1,65 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('images/spectro2.gif');
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.calculator {
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.1); /* Sombras adicionais para efeito 3D */
+    width: 400px;
+    padding: 30px;
+    text-align: center;
+    position: relative; /* Necessário para o efeito de pseudo-elemento */
+    transform-style: preserve-3d; /* Preserve 3D */
+    perspective: 1000px; /* Adiciona perspectiva */
+    transition: transform 0.3s ease; /* Animação suave ao transformar */
+}
+
+.calculator:hover {
+    transform: rotateY(8deg) rotateX(8deg); /* Efeito 3D ao passar o mouse */
+}
+
+.display {
+    background: #222;
+    color: #fff;
+    font-size: 30px;
+    height: 90px;
+    margin-bottom: 10px;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5); /* Sombra interna para dar mais profundidade */
+}
+
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+button {
+    padding: 20px;
+    border: none;
+    border-radius: 5px;
+    background: #6200ea;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
